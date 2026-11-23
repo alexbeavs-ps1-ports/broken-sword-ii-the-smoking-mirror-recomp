@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Broken Sword II: The Smoking Mirror"
+id = "SCES-00798"
+players = 1
+exe = "disc/SCES_007.98"
+disc = "disc/Broken Sword II - The Smoking Mirror (Europe).cue"
+discs = ["disc/Broken Sword II - The Smoking Mirror (Europe).cue"]
+disc_serials = ["SCES-00798"]
+load_address = "0x80010000"
+entry_pc = "0x8003C3C4"
+text_size = "0x00057000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Broken Sword II - The Smoking Mirror (Europe) (Track 1).bin"
+cue_name = "Broken Sword II - The Smoking Mirror (Europe).cue"
+boot_exe = "SCES_007.98"
+known_sizes = [589230096]
+known_md5 = [
+  "3a972fcea9a6b5e0a744a63e89da4f00",
+]
+known_sha1 = [
+  "5384833700703710c11ece29832e392df5569510",
+]
+known_crc32 = [
+  "67eebbad",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Broken Sword II: The Smoking Mirror Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 3
+required_disc_fp = "32c36e61eee848db92c0d01c95e7fd05f0af0899601c43b5577accf8cca01915"

@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "broken-sword-ii-the-smoking-mirror-psx",
+  "name": "Broken Sword II: The Smoking Mirror",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "broken-sword-ii-the-smoking-mirror-recomp",
+  "rom_identity": {
+    "crc32": [
+      "67eebbad"
+    ],
+    "md5": [
+      "3a972fcea9a6b5e0a744a63e89da4f00"
+    ],
+    "sha1": [
+      "5384833700703710c11ece29832e392df5569510"
+    ],
+    "disc_serials": [
+      "SCES-00798"
+    ],
+    "sizes": [
+      589230096
+    ],
+    "filenames": [
+      "Broken Sword II - The Smoking Mirror (Europe).cue",
+      "Broken Sword II - The Smoking Mirror (Europe) (Track 1).bin"
+    ],
+    "track_counts": [
+      3
+    ],
+    "disc_fps": [
+      "32c36e61eee848db92c0d01c95e7fd05f0af0899601c43b5577accf8cca01915"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/broken-sword-ii-the-smoking-mirror-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "broken-sword-ii-the-smoking-mirror-*-windows-x64.zip",
+      "linux-x64": "broken-sword-ii-the-smoking-mirror-*-linux-x64.zip",
+      "macos-arm64": "broken-sword-ii-the-smoking-mirror-*-macos-arm64.zip",
+      "macos-x64": "broken-sword-ii-the-smoking-mirror-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "broken_sword_ii_the_smoking_mirror.exe",
+    "linux": "broken_sword_ii_the_smoking_mirror",
+    "macos": "broken_sword_ii_the_smoking_mirror"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/broken-sword-ii-the-smoking-mirror-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

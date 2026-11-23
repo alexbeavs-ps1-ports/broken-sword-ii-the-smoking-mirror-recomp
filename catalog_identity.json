@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Broken Sword II: The Smoking Mirror",
+    "id": "SCES-00798",
+    "boot_exe": "SCES_007.98"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Broken Sword II - The Smoking Mirror (Europe).cue",
+    "bin_name": "Broken Sword II - The Smoking Mirror (Europe) (Track 1).bin",
+    "track_counts": [
+      3
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 589230096,
+      "md5": "3a972fcea9a6b5e0a744a63e89da4f00",
+      "sha1": "5384833700703710c11ece29832e392df5569510",
+      "crc32": "67eebbad"
+    },
+    "disc_fp": "32c36e61eee848db92c0d01c95e7fd05f0af0899601c43b5577accf8cca01915"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8003C3C4",
+    "text_size": "0x00057000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 601,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
